@@ -29,7 +29,7 @@ export class DeletarComponent implements OnInit {
   }
 
   btnSim() {
-    this.postagemService.delePostagem(this.postagem.id).subscribe(() => {
+    this.postagemService.deletePostagem(this.postagem.id).subscribe(() => {
       this.delOk = true
       this.router.navigate(['/feed'])
       localStorage.setItem("delOk", this.delOk.toString())
